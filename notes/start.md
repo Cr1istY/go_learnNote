@@ -135,14 +135,34 @@ func main() {
 常量可以用于枚举
 
 ```go
+package main
+
+import "fmt"
+
 const (
-Unknown = 0
-Female = 1
-Male = 2
+  Unknown = 0
+  Female  = 1
+  Male    = 2
 )
+
+func main() {
+  fmt.Print(Unknown, Female, Male)
+}
+
 ```
 
 #### iota
 
 在定义常量中使用`iota`关键字，简化了常量用于增长数字的定义
 
+### 3. 函数
+
+Go 中的函数可以返回多个值
+
+使用`func 函数名(传参1, 传参2)(返回值1, 返回值2)`的方式函数的返回值
+
+#### go函数运行路径
+
+![img.png](img.png)
+
+先进入包，再从`init()`函数中返回
